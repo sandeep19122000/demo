@@ -1,0 +1,39 @@
+.body{
+    color: aquamarine;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    
+}
+.navs{
+    
+    display: inline;
+}
+ul{
+    list-style-type: none;  
+    margin: 0%;
+    padding: 0px;  
+    overflow: hidden; 
+     background-color: rgb(27, 105, 223);
+     border-style: inset;
+}
+li{
+    float: right; 
+    
+}
+li a{
+    display: block;  
+    color: rgb(250, 252, 253);  
+
+    font-size:20px;  
+    text-align: center;  
+    padding: 10px 20px;  
+    text-decoration: none;  
+    /* text-shadow: 5px 5px 5px rgb(117, 117, 117); */
+   
+}
+ li a:hover{
+color: white;
+}

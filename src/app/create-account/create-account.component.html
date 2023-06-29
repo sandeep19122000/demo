@@ -1,0 +1,25 @@
+<div style="display:grid;place-items:center ;border-style: outset">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    {{account | json}}
+        <div class="form-group">
+            <label class="form-label"  for="form2Example1">Account Number</label><br>
+      <input type="number" name="accountNumber" ngModel #account_Number=ngModel [(ngModel)]="accountNumber">
+        </div>
+    
+    <div class="form-group">
+       
+        <label class="form-label"  for="form2Example1">Bank Code</label><br>
+        <input type="email" name="bankCode" ngModel #bank_Code=ngModel [(ngModel)]="bankCode" required>
+    </div>
+    
+    <div class="form-group">
+        <label class="form-label"  for="form2Example1">Branch Code</label><br>
+        <input type="email" name="bankCode" ngModel #branch_Code=ngModel [(ngModel)]="branchCode" required>
+    </div>
+<br>
+    <button type="submit" [disabled]="userForm.invalid" class="btn btn-primary btn-block mb-4"  >Submit</button>
+    </form>
+    </div>
+    <div class="center1">
+        <button type="button"  (click)="goBack()" mat-raised-button ><mat-icon class="material-icons color_green icon-display">reply</mat-icon></button>
+        </div>

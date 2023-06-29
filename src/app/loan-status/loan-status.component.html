@@ -1,0 +1,30 @@
+<div >
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Loan Number</th>
+          <th>Amount</th>
+          <th>status</th>
+          <th>Account Id</th>
+       
+         
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr   *ngFor="let x of loanList">
+          <td>{{x.loanNumber}}</td>
+          <td>{{x.amount}}</td>
+          <td>{{x.request}}</td>
+          <td>{{x.account.accountNumber}}</td>
+
+ 
+          
+        </tr>
+      </tbody>
+
+    </table>
+</div>
+<div class="center1">
+  <button (click)="goBack()" mat-raised-button ><mat-icon class="material-icons color_green icon-display">reply</mat-icon></button>
+  </div>

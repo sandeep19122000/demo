@@ -1,0 +1,25 @@
+<div class="center">
+<label>Select Account No.</label>
+<ul class="nav nav-tabs" *ngFor ="let x of accountList"  >
+    <li class="nav-item" >
+      <button mat-raised-button class="nav-link active" id="view-all" data-bs-toggle="tab" type="button" role="tab" aria-controls="home" aria-selected="true" (click)="onClick(x.accountNumber)">{{x.accountNumber}}</button>
+      {{currentAccountNumber}}
+    </li>
+   
+  </ul>
+  <div class="card mb-4 balance">
+    <div class="card-body">
+        <form  (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <div class="mb-3">
+                <label class="small mb-1" for="balance">Request Loan</label>
+                <input class="form-control" id="balance" type="text" [(ngModel)]="amount" name="balance" ngModel required>
+                
+                <button [disabled]="userForm.invalid" mat-raised-button color="primary" tyep="button" >Submit amount</button><br>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<div class="center1">
+  <button type="button"  (click)="goBack()" mat-raised-button ><mat-icon class="material-icons color_green icon-display">reply</mat-icon></button>
+  </div>

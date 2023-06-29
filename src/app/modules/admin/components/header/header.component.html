@@ -1,0 +1,30 @@
+  
+<mat-toolbar color="primary" class="navbar">
+  <div>
+    Admin
+  </div>
+
+
+ 
+ 
+
+
+
+      <!-- <div style="margin-bottom:-30px;">
+      <mat-icon style="margin-top:-2px" matPrefix></mat-icon>
+    </div>
+    <span matPrefix>
+      <mat-icon matPrefix>search</mat-icon>
+    </span>
+    <example-tel-input placeholder="&nbsp;&nbsp;Phone number" required ></example-tel-input>
+     <mat-hint>Include area code</mat-hint> -->
+  
+
+   <div>
+    <span><a class="active" routerLink="./Home">Home</a> </span>
+<span> <a  routerLink="./User_detail">User Details</a></span>
+    <span><a routerLink="./About">About</a></span>
+   <span [matBadge]="count" matBadgeColor="accent" [matBadgeHidden]="count ===0" > <a routerLink="./Loan">Loan Details</a></span>
+    <span><button mat-button (click)="logOut()">	<mat-icon>exit_to_app</mat-icon>Log out</button></span>
+   </div>
+  </mat-toolbar>

@@ -1,0 +1,26 @@
+<div >
+
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>email</th>
+         
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr   *ngFor="let x of userList">
+          <td>{{x.id}}</td>
+          <td>{{x.email}}</td>
+ 
+          <td class="action_tab">
+
+            <!-- <button class="btn btn-secondary" (click)="onAddBalance(x.id)">Add Balance</button><br> -->
+            <button class="btn btn-danger" (click)="onDelete(x.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+</div>

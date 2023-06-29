@@ -1,0 +1,28 @@
+<form>
+  <span>
+    <mat-icon>search</mat-icon>
+    <mat-form-field>
+      
+    <mat-label>Search</mat-label>
+    <input matInput class="search" name="searchText" type="text" [(ngModel)]="searchText" ngModel>
+
+    </mat-form-field>
+  </span>
+</form>
+<br>
+
+<div class="grid-container">
+  <ng-container *ngFor="let user of userList">
+    <div class="grid-item" *ngIf="searchText==='' || user.email.includes(searchText) ">
+
+      <img class="center" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png">
+      <div class="center1">{{user.email}}</div>
+      <div class="center1">
+        <button mat-raised-button color="warn" (click)="delete(user.id)">Delete</button> 
+       </div>
+    </div>
+  
+  </ng-container>
+
+
+</div>

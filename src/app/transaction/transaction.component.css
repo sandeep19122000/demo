@@ -1,0 +1,25 @@
+.center2{
+   
+    border-style: outset;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.center{
+   
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.center1{
+   
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.material-icons.color_green { color: #382a83; }
+.icon-display {
+    transform: scale(2);
+ }

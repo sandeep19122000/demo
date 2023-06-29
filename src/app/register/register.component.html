@@ -1,0 +1,42 @@
+{{user | json}}
+<div style="display:grid;place-items:center ;border-style: outset">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Id</mat-label>
+                <input matInput type="number" name="id" ngModel #n_umber=ngModel [(ngModel)]="user.id" required>
+            </mat-form-field>
+        </div>
+
+        <div class="form-group">
+
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput type="email" name="email" ngModel #e_mail=ngModel [(ngModel)]="user.email" required>
+            </mat-form-field>
+        </div>
+
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Role</mat-label>
+                <mat-select [(ngModel)]="user.role" ngModel name="role" required>
+
+
+                    <mat-option *ngFor="let Topic of topic" [value]="Topic">{{Topic}}</mat-option>
+                    
+                    </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="form-group">
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput type="password" #pass id="form2Example2" name="password" class="form-control" required
+                    ngModel #p_assword="ngModel" [class.is-invalid]="p_assword.invalid && p_assword.touched"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" [(ngModel)]="user.password">
+            </mat-form-field>
+        </div>
+        <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary btn-block mb-4" (click)="onSubmit()">Submit</button>
+    </form>
+</div>

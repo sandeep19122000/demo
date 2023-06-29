@@ -1,0 +1,63 @@
+
+
+<!-- <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1"><a routerLink="/LoanStatus">Loan Status</a></span>
+      <span class="navbar-brand mb-0 h1"><a routerLink="/LoanRequest">Loan Request</a></span>
+      <span class="navbar-brand mb-0 h1"><a routerLink="/Account">Account Detail</a></span>
+      <span class="navbar-brand mb-0 h1"><a routerLink="/Transaction">Transaction</a></span>
+      <span class="navbar-brand mb-0 h1"><a routerLink="/CreateAccount">Create Account</a></span>
+      <span class="navbar-brand mb-0 h2 sign-out" (click)="logOut()">Sign Out</span>
+    </div>
+</nav> -->
+
+<mat-toolbar color="primary" class="navbar">
+    <div>
+        User
+    </div>
+   <div>
+    <span ><a  routerLink="/LoanStatus">Loan Status</a></span>
+    <span ><a routerLink="/LoanRequest">Loan Request</a></span>
+    <span ><a routerLink="/Account">Account Detail</a></span>
+    <span ><a routerLink="/Transaction">Transaction</a></span>
+    <span ><a routerLink="/CreateAccount">Create Account</a></span>
+    <span><button mat-button (click)="logOut()">	<mat-icon>exit_to_app</mat-icon>Log out</button></span>
+   </div>
+</mat-toolbar>
+
+<!-- <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1"><a routerLink="/LoanStatus">Loan Status</a></span>
+      <span class="navbar-brand mb-0 h1"><a routerLink="/LoanRequest">Loan Request</a></span>
+      <span class="navbar-brand mb-0 h1"><a routerLink="/Account">Account Detail</a></span>
+      <span class="navbar-brand mb-0 h1"><a routerLink="/Transaction">Transaction</a></span>
+      <span class="navbar-brand mb-0 h1"><a routerLink="/CreateAccount">Create Account</a></span>
+      <span class="navbar-brand mb-0 h2 sign-out" (click)="logOut()">Sign Out</span>
+    </div>
+</nav> -->
+
+<div class="col-xl-8 details">
+    <div class="card mb-4">
+        <div class="card-header">User Details</div>
+        <div class="card-body">
+            <form>
+                <div class="row gx-3 mb-3">
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="id" > id</label>
+                        <input class="form-control" id="id"  type="text" [(ngModel)]="id" name="id" disabled ngModel>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="email">Email</label>
+                        <input class="form-control" id="email"  type="text" [(ngModel)]="email" name="email" disabled ngModel>
+                    </div>
+                  
+                    <div class="col-md-6"  *ngFor="let x of accountList">
+                        <label class="small mb-1" for="accountList">account</label>
+                        <input class="form-control" id="x.accountNumber" type="text" [(ngModel)]="x.accountNumber" name="accountNumber" disabled>
+                        {{x.accountNumber}}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

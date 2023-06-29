@@ -1,0 +1,30 @@
+.grid-container{
+    display: grid;
+ 
+    grid-template-columns: 200px 200px 200px 200px ;
+    grid-auto-rows: 230px;
+    grid-gap:50px;
+    
+}
+.grid-item{
+    background-color:white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.center{
+    width: 200px;  
+height: 150px;  
+
+
+object-fit: none;  
+object-position: center top;  
+}
+.center1{
+  display:flex;
+  justify-content: center;
+  font-weight: 200;
+}
+.search{
+    border-radius: 20px;
+    border:black;
+    border-style: solid;
+}

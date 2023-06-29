@@ -1,0 +1,35 @@
+<div class="center2">
+  <p>Select Account No:</p>
+<ul class="nav nav-tabs" *ngFor ="let x of accountList"  >
+    <li class="nav-item" >
+      <button   mat-raised-button id="view-all" data-bs-toggle="tab" type="button" role="tab" aria-controls="home" aria-selected="true" (click)="onClick(x.accountNumber)">{{x.accountNumber}}</button>
+     
+     
+    </li>
+    
+   
+  </ul>
+ 
+  Account {{currentAccountNumber}} selected
+<form  (ngSubmit)="onSubmit()" class="center">
+    <div style="display: grid;justify-content: center">
+        <label>Enter Id</label><br>
+        <input type="number" name="accountNumber" ngModel [(ngModel)]="accountNumber">
+        {{accountNumber}}
+    </div>
+
+ <div style="display: grid;justify-content: center">
+    <label>Enter Amount</label><br>
+    <input type="number" name="amount" ngModel [(ngModel)]="amount">
+ </div>
+ <br>
+        <div style="display: grid;justify-content: center">
+            <!-- Submit button -->
+            <button type="submit" mat-raised-button color="primary"   style="display: grid;justify-content: center">Send</button>
+          </div>
+  
+</form>
+</div>
+<div class="center1">
+<button (click)="goBack()" mat-raised-button ><mat-icon class="material-icons color_green icon-display">reply</mat-icon></button>
+</div>
